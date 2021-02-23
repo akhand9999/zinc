@@ -19,8 +19,6 @@ jdk:
   - openjdk8
 
 script:
-  - update-alternatives --config java
-  - update-alternatives --config javac
   - sbt scriptit
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
