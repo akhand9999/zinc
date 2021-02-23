@@ -15,7 +15,7 @@ virt: lxd
 group: edge
 
 jdk:
-  - openjdk6
+  - openjdk9
 
 script:
   - sbt scriptit
