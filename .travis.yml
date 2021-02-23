@@ -13,7 +13,7 @@ arch:
 
 virt: vm
 group: edge
-dist: focal
+dist: trusty
 
 jdk:
   - openjdk11
