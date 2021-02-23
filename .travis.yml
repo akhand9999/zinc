@@ -11,15 +11,16 @@ arch:
   - amd64
   - arm64-graviton2
 
-virt: lxd
+virt: vm
 group: edge
+dist: focal
 
 jdk:
   - openjdk11
 
 script:
-  - sudo update-alternatives --config java
-  - sudo update-alternatives --config javac
+  - update-alternatives --config java
+  - update-alternatives --config javac
   - sbt scriptit
   # Tricks to avoid unnecessary cache updates
   - find $HOME/.sbt -name "*.lock" | xargs rm
